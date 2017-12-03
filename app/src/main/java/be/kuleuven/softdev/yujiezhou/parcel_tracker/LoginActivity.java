@@ -103,6 +103,7 @@ public class LoginActivity extends AppCompatActivity {
         // Success! Call the MainActivity.
         Intent intent = new Intent(this, MainActivity.class);
         startActivity(intent);
+        finish();
     }
 
     public void RegisterActivity(View view) {
