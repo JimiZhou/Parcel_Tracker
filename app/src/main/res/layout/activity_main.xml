@@ -5,12 +5,12 @@
     android:id="@+id/MainCoordinatorLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/colorPrimary"
+    android:background="#ff9f00"
     tools:context="be.kuleuven.softdev.yujiezhou.parcel_tracker.MainActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:background="@color/colorPrimary"
         android:orientation="vertical"
         tools:layout_editor_absoluteY="5dp">
@@ -19,32 +19,78 @@
         <android.support.v7.widget.Toolbar
             android:id="@+id/my_toolbar"
             android:layout_width="match_parent"
-            android:layout_height="?attr/actionBarSize"
-            android:background="@color/colorAccent"
-            android:elevation="4dp"
-            android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
-            app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
-
-        <Button
-            android:id="@+id/button3"
-            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="center_vertical|center"
-            android:layout_marginTop="10dp"
-            android:layout_weight="1"
-            android:background="@color/colorAccent"
-            android:onClick="ScanQR"
-            android:text="Scan QR Code"
-            android:textAlignment="center"
-            android:textColor="@color/common_google_signin_btn_text_dark_default"
-            android:textSize="12sp" />
+            android:background="@color/colorAccent">
 
-        <TextView
-            android:id="@+id/result_textview"
-            android:layout_width="wrap_content"
+        </android.support.v7.widget.Toolbar>
+
+        <!--<pl.droidsonroids.gif.GifImageView
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/pdd" />-->
+
+        <ImageView
+            android:id="@+id/imageView4"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:text="result_textview" />
+            android:layout_marginTop="80dp"
+            app:srcCompat="@mipmap/singlelogo" />
+
+        <TextView
+            android:id="@+id/textView7"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical|center_horizontal|center|clip_vertical|clip_horizontal"
+            android:layout_marginTop="30dp"
+            android:fontFamily="sans-serif"
+            android:text="Track my package"
+            android:textAlignment="center"
+            android:textColor="@color/common_google_signin_btn_text_dark_default"
+            android:textSize="36sp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/button7"
+            android:layout_width="230dp"
+            android:layout_height="70dp"
+            android:layout_gravity="center_horizontal|center"
+            android:layout_marginTop="30dp"
+            android:background="@color/colorAccent"
+            android:onClick="ScanQR"
+            android:text="Scan QR code"
+            android:textColor="@color/common_google_signin_btn_text_dark_default"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/textView9"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:text="Input 4 digits tracking number"
+            android:textAlignment="center"
+            android:textColor="@color/common_google_signin_btn_text_dark_default"
+            android:textSize="14sp" />
+
+        <EditText
+            android:id="@+id/editText6"
+            android:layout_width="230dp"
+            android:layout_height="70dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:background="@color/colorAccent"
+            android:ems="10"
+            android:hint="TRACKING NUMBER"
+            android:imeOptions="actionDone"
+            android:inputType="number"
+            android:maxLength="4"
+            android:maxLines="1"
+            android:textAlignment="center"
+            android:textColor="@color/common_google_signin_btn_text_dark_default"
+            android:textColorHint="#c2c1c1" />
 
     </LinearLayout>
 

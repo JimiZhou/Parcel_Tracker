@@ -5,6 +5,7 @@
     <string name="login_screen_title"></string>
     <string name="register">Registration</string>
     <!-- Strings related to MainActivity-->
+    <string name="action_settings">Log Out</string>
     <string name="scan_barcode_button">Scan barcode</string>
     <string name="barcode_capture"></string>
     <string name="no_barcode_captured">No barcode captured</string>
@@ -15,4 +16,9 @@
     <string name="permission_camera_rationale">Access to the camera is needed for detection</string>
     <string name="no_camera_permission">This application cannot run because it does not have the camera permission.  The application will now exit.</string>
     <string name="low_storage_error">Face detector dependencies cannot be downloaded due to low device storage</string>
+    <string name="confirm_dialog_message">Confirm Log out?</string>
+    <string name="confirm_dialog_title">Log Out</string>
+    <string name="confirm">Confirm</string>
+    <string name="cancel">Cancel</string>
+    <string name="title_activity_map">Map</string>
 </resources>
