@@ -1,7 +1,7 @@
 package be.kuleuven.softdev.yujiezhou.parcel_tracker;
 
-import android.support.v4.app.FragmentActivity;
 import android.os.Bundle;
+import android.support.v4.app.FragmentActivity;
 
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
@@ -10,8 +10,10 @@ import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.PolylineOptions;
 
+// Google Map activity with tracking details lined on map
 public class MapActivity extends FragmentActivity implements OnMapReadyCallback {
 
+    int length = DisplayActivity.responselength;
     private GoogleMap map;
 
     @Override
@@ -38,14 +40,18 @@ public class MapActivity extends FragmentActivity implements OnMapReadyCallback 
     public void onMapReady(GoogleMap googleMap) {
         map = googleMap;
 
-        map.moveCamera(CameraUpdateFactory.newLatLngZoom(
-                new LatLng(-18.142, 178.431), 2));
 
-        // Polylines are useful for marking paths and routes on the map.
-        map.addPolyline(new PolylineOptions().geodesic(true)
-                .add(new LatLng(-33.866, 151.195))  // Sydney
-                .add(new LatLng(-18.142, 178.431))  // Fiji
-                .color(0xFFFFFFFF)
-        );
+        map.moveCamera(CameraUpdateFactory.zoomOut());
+        // Draw the lines between each place the package passes
+        for (int i = 0; i < length - 1; i++) {
+            map.addPolyline(new PolylineOptions().geodesic(true)
+                    .add(new LatLng(DisplayActivity.locations.get(i).getLat(), DisplayActivity.locations.get(i).getLng()))
+                    .add(new LatLng(DisplayActivity.locations.get(i + 1).getLat(), DisplayActivity.locations.get(i + 1).getLng()))
+                    .color(0xFFFF9F00));
+        }
+
+        map.moveCamera(CameraUpdateFactory.newLatLngZoom(
+                new LatLng(DisplayActivity.locations.get(length - 1).getLat(), DisplayActivity.locations.get(length - 1).getLng()), 5));
+
     }
 }

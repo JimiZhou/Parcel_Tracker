@@ -4,17 +4,16 @@ package be.kuleuven.softdev.yujiezhou.parcel_tracker;
  * Created by yujiezhou on 05/12/2017.
  */
 
-import java.util.ArrayList;
-import java.util.HashMap;
-
 import android.annotation.SuppressLint;
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
-import android.widget.ImageView;
 import android.widget.TextView;
+
+import java.util.ArrayList;
+import java.util.HashMap;
 
 public class ListViewAdapter extends BaseAdapter {
 
@@ -48,7 +47,8 @@ public class ListViewAdapter extends BaseAdapter {
         TextView origin;
         TextView destination;
         TextView current_location;
-        ImageView flag;
+        TextView date;
+        TextView discription;
 
         LayoutInflater inflater = (LayoutInflater) context
                 .getSystemService(Context.LAYOUT_INFLATER_SERVICE);
@@ -62,11 +62,16 @@ public class ListViewAdapter extends BaseAdapter {
         origin = (TextView) itemView.findViewById(R.id.origin);
         destination = (TextView) itemView.findViewById(R.id.destination);
         current_location = (TextView) itemView.findViewById(R.id.current_location);
+        date = (TextView) itemView.findViewById(R.id.Date_time);
+        discription = (TextView) itemView.findViewById(R.id.discription);
 
         // Capture position and set results to the TextViews
         origin.setText(resultp.get(DisplayActivity.ORIGIN));
         destination.setText(resultp.get(DisplayActivity.DESTINATION));
         current_location.setText(resultp.get(DisplayActivity.CURRENT_LOCATION));
+        date.setText(resultp.get(DisplayActivity.DATE));
+        discription.setText(resultp.get(DisplayActivity.DISCRIPTION));
+
         return itemView;
     }
 }

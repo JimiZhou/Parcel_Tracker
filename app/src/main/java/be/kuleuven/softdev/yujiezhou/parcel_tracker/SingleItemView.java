@@ -14,6 +14,8 @@ public class SingleItemView extends Activity {
     String origin;
     String destination;
     String current_location;
+    String date_time;
+    String description;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -28,6 +30,10 @@ public class SingleItemView extends Activity {
         destination = i.getStringExtra("destination");
         // Get the result of population
         current_location = i.getStringExtra("current_location");
+
+        date_time = i.getStringExtra("Date_time");
+
+        description = i.getStringExtra("description");
 
 
         // Locate the TextViews in singleitemview.xml

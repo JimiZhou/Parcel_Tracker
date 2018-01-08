@@ -20,6 +20,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+
+        <!-- Splash Activity -->
         <activity
             android:name=".SplashActivity"
             android:theme="@style/SplashTheme">
@@ -29,8 +31,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <!-- Splash Activity -->
 
+        <!-- Login Activity -->
         <activity
             android:name=".LoginActivity"
             android:theme="@style/NoTitle">
@@ -40,11 +42,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <!-- Login Activity -->
-
-
-        <!-- <activity android:name=".MainActivity" / -->
-
 
         <!-- Main Activity -->
         <activity
@@ -52,10 +49,11 @@
             android:theme="@style/Theme.AppCompat.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <!-- Registration Activity -->
         <activity
             android:name=".RegisterActivity"
             android:label="@string/register"
@@ -67,15 +65,17 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <!-- Registration Activity -->
 
+        <!-- Barcode Activity -->
         <activity
             android:name=".barcode.BarcodeCaptureActivity"
             android:theme="@style/Theme.AppCompat.NoActionBar" />
+
+        <!-- Display Activity -->
         <activity
             android:name=".DisplayActivity"
             android:parentActivityName=".MainActivity"
-            android:theme="@style/Theme.AppCompat.NoActionBar"></activity>
+            android:theme="@style/Theme.AppCompat.NoActionBar" />
 
         <!--
              The API key for Google Maps-based APIs is defined as a string resource.
@@ -89,10 +89,24 @@
             android:name="com.google.android.geo.API_KEY"
             android:value="@string/google_maps_key" />
 
+        <!-- Map Activity -->
         <activity
             android:name=".MapActivity"
-            android:label="@string/title_activity_map"></activity>
+            android:label="@string/title_activity_map"
+            android:parentActivityName=".DisplayActivity" />
+
+        <!-- Single ItemView-->
         <activity android:name=".SingleItemView" />
+
+        <!-- Update Activity -->
+        <activity android:name=".UpdateActivity" />
+
+        <!-- UpdateInput Activity -->
+        <activity
+            android:name=".UpdateInputActivity"
+            android:parentActivityName=".UpdateActivity" />
+
+
     </application>
 
 </manifest>
