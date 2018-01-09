@@ -1,4 +1,7 @@
 # Easy Track
+
+![alt tag](https://github.com/JimiZhou/Parcel_Tracker/blob/master/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png)
+
 Software Design Project
 
 This is a project for Software Development course.
